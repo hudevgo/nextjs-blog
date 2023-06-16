@@ -33,14 +33,11 @@ export async function getStaticPaths(){
 
 export async function getStaticProps({ params }){
     console.log("-------- PARAMS", params);
-    const res = await fetch('https://api.github.com/repos/vercel/next.js');
-    const repo = await res.json();
     
     const postData = await getPostData(params.id);
     return {
         props:{
             postData,
-            repo
         },
     }
 }
