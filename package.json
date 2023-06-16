@@ -1,7 +1,7 @@
 {
   "private": false,
   "scripts": {
-    
+    "vercel-build": "npm run prepare && next build",
   },
   "dependencies": {
     "date-fns": "^2.30.0",
